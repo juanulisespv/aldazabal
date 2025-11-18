@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALDAZABAL - Catálogo FW 25/26</title>
+    <link rel="icon" type="image/png" href="images/ALDAZABAL-3.png">
+    <!-- Google Fonts: Work Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            background: #fff;
+            transition: padding-top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body.catalog-view {
+            padding-top: 80px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            padding: 2rem 2rem 0.5rem;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 1000;
+        }
+
+        header.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #eee;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1600px;
+            margin: 0 auto;
+            gap: 2rem;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        header.fixed .header-content {
+            justify-content: space-between;
+        }
+
+        /* Logo en header */
+        .logo-header {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #000;
+            white-space: nowrap;
+            opacity: 0;
+            max-width: 0;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .logo-header img {
+            height: 30px;
+            width: auto;
+            display: block;
+        }
+
+        .logo-header:hover {
+            opacity: 0.6;
+        }
+
+        header.fixed .logo-header {
+            opacity: 1;
+            max-width: 300px;
+        }
+
+        /* Contact info en header */
+        .contact-info-header {
+            text-align: right;
+            font-size: 0.75rem;
+            line-height: 1.4;
+            white-space: nowrap;
+            opacity: 0;
+            max-width: 0;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        header.fixed .contact-info-header {
+            opacity: 1;
+            max-width: 200px;
+        }
+
+        /* Menú navegación */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #000;
+            text-decoration: none;
+            font-weight: 400;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        header.fixed nav ul li a {
+            letter-spacing: 1.5px;
+            font-size: 0.85rem;
+        }
+
+        nav ul li a:hover {
+            opacity: 0.6;
+            transform: translateY(-1px);
+        }
+
+        nav ul li a.active {
+            font-weight: 600;
+        }
+
+        /* Sección central */
+        .hero {
+            background: #fff;
+            padding: 6rem 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+                        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hero.hidden {
+            display: none;
+            opacity: 0;
+            transform: translateY(-20px);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #000;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .hero p {
+            font-size: 0.95rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #000;
+            line-height: 1.8;
+        }
+
+        /* Contenedor de productos */
+        .products-container {
+            max-width: 1600px;
+            margin: 0 auto 2rem;
+            padding: 1rem 2rem 0;
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .products-container.visible {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        /* Card de producto */
+        .product-card {
+            background: #f5f5f5;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                        box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .product-card:nth-child(1) { animation-delay: 0.05s; }
+        .product-card:nth-child(2) { animation-delay: 0.1s; }
+        .product-card:nth-child(3) { animation-delay: 0.15s; }
+        .product-card:nth-child(4) { animation-delay: 0.2s; }
+        .product-card:nth-child(5) { animation-delay: 0.25s; }
+        .product-card:nth-child(6) { animation-delay: 0.3s; }
+        .product-card:nth-child(7) { animation-delay: 0.35s; }
+        .product-card:nth-child(8) { animation-delay: 0.4s; }
+        .product-card:nth-child(9) { animation-delay: 0.45s; }
+        .product-card:nth-child(10) { animation-delay: 0.5s; }
+        .product-card:nth-child(11) { animation-delay: 0.55s; }
+        .product-card:nth-child(12) { animation-delay: 0.6s; }
+        .product-card:nth-child(13) { animation-delay: 0.65s; }
+        .product-card:nth-child(14) { animation-delay: 0.7s; }
+        .product-card:nth-child(15) { animation-delay: 0.75s; }
+        .product-card:nth-child(16) { animation-delay: 0.8s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
+        }
+
+        .product-image img.loading {
+            opacity: 0;
+        }
+
+        .product-image img:not(.loading) {
+            opacity: 1;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .product-name {
+            font-size: 0.85rem;
+            font-weight: 400;
+            margin-bottom: 0.3rem;
+            color: #000;
+        }
+
+        .product-price {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: #000;
+        }
+
+        /* Logo */
+        .logo-section {
+            background: #fff;
+            padding: 4rem 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .logo-section.hidden {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .logo {
+            max-width: 98%;
+            width: 100%;
+            height: auto;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: #fff;
+            padding: 2rem 2rem 3rem;
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        footer.hidden {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-box {
+            background: #fff;
+            padding: 1rem 2rem;
+            color: #000;
+            text-align: left;
+        }
+
+        .footer-box:first-child {
+            text-align: left;
+        }
+
+        .footer-box:last-child {
+            text-align: right;
+        }
+
+        .footer-box h3 {
+            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            display: none;
+        }
+
+        .footer-box p {
+            font-size: 0.75rem;
+            line-height: 1.6;
+            font-weight: 400;
+            max-width: 120px;
+        }
+
+        .footer-box:nth-child(2) p {
+            max-width: 100px;
+            margin: 0 auto;
+        }
+
+        .footer-box:last-child p {
+            max-width: 120px;
+            margin-left: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body.catalog-view {
+                padding-top: 140px;
+            }
+
+            header {
+                padding: 1.5rem 1rem 0.5rem;
+            }
+
+            header.fixed {
+                padding: 1rem;
+            }
+
+            header.fixed .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            .logo-header img {
+                height: 25px;
+            }
+
+            header.fixed .logo-header {
+                max-width: 100%;
+            }
+
+            header.fixed .contact-info-header {
+                max-width: 100%;
+                text-align: left;
+                font-size: 0.7rem;
+            }
+
+            nav ul {
+                gap: 1.5rem;
+                width: 100%;
+            }
+
+            nav ul li a {
+                font-size: 0.85rem;
+            }
+
+            header.fixed nav ul li a {
+                font-size: 0.8rem;
+            }
+
+            .hero {
+                padding: 4rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .products-container {
+                padding: 1rem 1rem 0;
+                margin: 0 auto 1.5rem;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .product-info {
+                padding: 0.8rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-box {
+                padding: 1rem;
+                text-align: left !important;
+            }
+
+            .footer-box p {
+                max-width: 100%;
+            }
+
+            .footer-box:nth-child(2) p {
+                max-width: 100%;
+                margin: 0;
+            }
+
+            .footer-box:last-child {
+                text-align: left !important;
+            }
+
+            .footer-box:last-child p {
+                max-width: 100%;
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body.catalog-view {
+                padding-top: 160px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+
+            header.fixed nav ul {
+                gap: 0.8rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+                letter-spacing: 2px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-section {
+                padding: 3rem 1rem;
+            }
+        }
+
+        /* Animaciones sutiles */
+        .hero, .logo-section, .footer-box {
+            animation: none;
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header con menú de navegación -->
+    <header id="mainHeader">
+        <div class="header-content">
+            <div class="logo-header" id="logoHeader">
+                <img src="images/ALDAZABAL-1.png" alt="ALDAZABAL">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#pendientes" data-section="pendientes">PENDIENTES</a></li>
+                    <li><a href="#collares" data-section="collares">COLLARES</a></li>
+                    <li><a href="#anillos" data-section="anillos">ANILLOS</a></li>
+                    <li><a href="#pulseras" data-section="pulseras">PULSERAS</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info-header">
+                PEDIDOS@ALDAZABAL.ES<br>
+                T (+34) 943 732 120
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección hero central -->
+    <section class="hero" id="heroSection">
+        <h1>CATÁLOGO<br>FW 25/26</h1>
+        <p>¿Te gustaría realizar un pedido o alguna otra consulta?<br>
+        Ponte en contacto con nosotros, estaremos encantados de atenderte.<br>
+        pedidos@aldazabal.es | T (+34) 943 732 120</p>
+    </section>
+
+    <!-- Contenedor de productos -->
+    <section class="products-container" id="productsContainer">
+        <div class="products-grid" id="productsGrid">
+            <!-- Los productos se cargarán aquí dinámicamente -->
+        </div>
+    </section>
+
+    <!-- Sección del logo -->
+    <section class="logo-section">
+        <div class="logo">
+            <img src="images/ALDAZABAL-1.png" alt="ALDAZABAL">
+        </div>
+    </section>
+
+    <!-- Footer con información -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-box">
+                <p>GETARIA, 8<br>
+                20005 SAN SEBASTIÁN</p>
+            </div>
+            <div class="footer-box">
+                <p>DE LUNES A SÁBADO<br>
+                10:00 - 13:30<br>
+                16:00 - 20:00</p>
+            </div>
+            <div class="footer-box">
+                <p>PEDIDOS@ALDAZABAL.ES<br>
+                T (+34) 943 732 120<br>
+                INSTAGRAM</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Datos de productos (se cargarán desde JSON)
+        let productsData = {};
+
+        // Referencias a elementos del DOM
+        const heroSection = document.getElementById('heroSection');
+        const productsContainer = document.getElementById('productsContainer');
+        const mainHeader = document.getElementById('mainHeader');
+        const logoHeader = document.getElementById('logoHeader');
+        const logoSection = document.querySelector('.logo-section');
+        const footer = document.querySelector('footer');
+        const body = document.body;
+
+        // Estado actual
+        let currentView = 'home';
+        let currentCategory = 'pendientes';
+
+        // Función para cargar productos desde JSON
+        async function loadProducts() {
+            try {
+                const response = await fetch('products.json');
+                productsData = await response.json();
+            } catch (error) {
+                console.error('Error cargando productos:', error);
+                productsData = { pendientes: [], collares: [], anillos: [], pulseras: [] };
+            }
+        }
+
+        // Función para renderizar los productos
+        function renderProducts(category) {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = '';
+            
+            const products = productsData[category] || [];
+            
+            if (products.length === 0) {
+                grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 2rem; color: #666;">No hay productos disponibles en esta categoría.</p>';
+                return;
+            }
+            
+            products.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}" loading="lazy" class="loading">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">${product.name}</div>
+                        <div class="product-price">${product.price}</div>
+                    </div>
+                `;
+                // Easy loading: ocultar imagen hasta que se cargue
+                const img = card.querySelector('img');
+                img.addEventListener('load', function() {
+                    img.classList.remove('loading');
+                });
+                grid.appendChild(card);
+            });
+        }
+
+        // Función para cambiar de vista
+        function switchView(view) {
+            currentView = view;
+            
+            // Actualizar enlaces activos
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+                if (link.dataset.section === view) {
+                    link.classList.add('active');
+                }
+            });
+
+            if (view === 'home') {
+                // Vista home - ocultar catálogo primero
+                productsContainer.classList.remove('visible');
+                
+                setTimeout(() => {
+                    // Mostrar hero, logo y footer
+                    heroSection.classList.remove('hidden');
+                    logoSection.classList.remove('hidden');
+                    footer.classList.remove('hidden');
+                    mainHeader.classList.remove('fixed');
+                    body.classList.remove('catalog-view');
+                }, 100);
+                
+                // Scroll suave al inicio
+                setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 200);
+            } else {
+                // Vista catálogo - ocultar hero, logo y footer
+                heroSection.classList.add('hidden');
+                logoSection.classList.add('hidden');
+                footer.classList.add('hidden');
+                
+                setTimeout(() => {
+                    mainHeader.classList.add('fixed');
+                    body.classList.add('catalog-view');
+                    
+                    // Renderizar productos de la categoría
+                    renderProducts(view);
+                    
+                    setTimeout(() => {
+                        productsContainer.classList.add('visible');
+                    }, 100);
+                }, 300);
+                
+                // Scroll al inicio
+                setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 400);
+            }
+        }
+
+        // Event listeners para los enlaces del menú
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const section = this.dataset.section;
+                switchView(section);
+            });
+        });
+
+        // Event listener para el logo (volver a home)
+        logoHeader.addEventListener('click', function() {
+            switchView('home');
+        });
+
+        // Inicializar aplicación
+        async function init() {
+            await loadProducts();
+            switchView('home');
+        }
+
+        // Cargar todo al inicio
+        init();
+
+        // Funciones de utilidad para gestionar productos
+        function addProduct(category, product) {
+            if (!productsData[category]) {
+                productsData[category] = [];
+            }
+            productsData[category].push(product);
+            if (currentView === category) {
+                renderProducts(category);
+            }
+        }
+
+        function removeProduct(category, id) {
+            if (!productsData[category]) return;
+            const index = productsData[category].findIndex(p => p.id === id);
+            if (index !== -1) {
+                productsData[category].splice(index, 1);
+                if (currentView === category) {
+                    renderProducts(category);
+                }
+            }
+        }
+
+        function updateProduct(category, id, newData) {
+            if (!productsData[category]) return;
+            const index = productsData[category].findIndex(p => p.id === id);
+            if (index !== -1) {
+                productsData[category][index] = { ...productsData[category][index], ...newData };
+                if (currentView === category) {
+                    renderProducts(category);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
