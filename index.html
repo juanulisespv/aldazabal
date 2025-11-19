@@ -794,10 +794,11 @@ footer {
             });
 
             if (view === 'home') {
-                // Vista home - ocultar catálogo primero
                 productsContainer.classList.remove('visible');
                 setTimeout(() => {
                     heroSection.classList.remove('hidden');
+                    logoSection.classList.remove('hidden');
+                    footer.classList.remove('hidden');
                     mainHeader.classList.remove('fixed');
                     body.classList.remove('catalog-view');
                 }, 100);
@@ -805,15 +806,31 @@ footer {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 }, 200);
             } else {
-                // Vista catálogo - ocultar solo hero
+                // Ocultar logo/footer y hero
                 heroSection.classList.add('hidden');
+                logoSection.classList.add('hidden');
+                footer.classList.add('hidden');
                 setTimeout(() => {
                     mainHeader.classList.add('fixed');
                     body.classList.add('catalog-view');
                     renderProducts(view);
+                    // Animación escalonada para productos
                     setTimeout(() => {
                         productsContainer.classList.add('visible');
-                    }, 100);
+                        // Mostrar logo/footer con fade-in después de los productos
+                        setTimeout(() => {
+                            logoSection.classList.remove('hidden');
+                            logoSection.style.opacity = 0;
+                            footer.classList.remove('hidden');
+                            footer.style.opacity = 0;
+                            setTimeout(() => {
+                                logoSection.style.transition = 'opacity 0.7s';
+                                logoSection.style.opacity = 1;
+                                footer.style.transition = 'opacity 0.7s';
+                                footer.style.opacity = 1;
+                            }, 100);
+                        }, 500);
+                    }, 200);
                 }, 300);
                 setTimeout(() => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
