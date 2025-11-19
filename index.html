@@ -796,39 +796,25 @@ footer {
             if (view === 'home') {
                 // Vista home - ocultar catálogo primero
                 productsContainer.classList.remove('visible');
-                
                 setTimeout(() => {
-                    // Mostrar hero, logo y footer
                     heroSection.classList.remove('hidden');
-                    logoSection.classList.remove('hidden');
-                    footer.classList.remove('hidden');
                     mainHeader.classList.remove('fixed');
                     body.classList.remove('catalog-view');
                 }, 100);
-                
-                // Scroll suave al inicio
                 setTimeout(() => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 }, 200);
             } else {
-                // Vista catálogo - ocultar hero, logo y footer
+                // Vista catálogo - ocultar solo hero
                 heroSection.classList.add('hidden');
-                logoSection.classList.add('hidden');
-                footer.classList.add('hidden');
-                
                 setTimeout(() => {
                     mainHeader.classList.add('fixed');
                     body.classList.add('catalog-view');
-                    
-                    // Renderizar productos de la categoría
                     renderProducts(view);
-                    
                     setTimeout(() => {
                         productsContainer.classList.add('visible');
                     }, 100);
                 }, 300);
-                
-                // Scroll al inicio
                 setTimeout(() => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 }, 400);
