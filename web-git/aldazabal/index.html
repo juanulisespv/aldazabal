@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALDAZABAL - Catálogo FW 25/26</title>
-    <meta name="description" content="Catálogo de joyería ALDAZABAL FW 25/26. Pendientes, collares, anillos y pulseras artesanales en San Sebastián. Contacta para pedidos y consultas.">
-    <meta name="keywords" content="joyería, pendientes, collares, anillos, pulseras, ALDAZABAL, San Sebastián, catálogo, FW 25/26, artesanía, pedidos">
+    <meta name="description"
+        content="Catálogo de joyería ALDAZABAL FW 25/26. Pendientes, collares, anillos y pulseras artesanales en San Sebastián. Contacta para pedidos y consultas.">
+    <meta name="keywords"
+        content="joyería, pendientes, collares, anillos, pulseras, ALDAZABAL, San Sebastián, catálogo, FW 25/26, artesanía, pedidos">
     <link rel="icon" type="image/png" href="images/ALDAZABAL-3.png">
     <!-- Google Fonts: Work Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-        <!-- Datos estructurados para productos ejemplo -->
-        <script type="application/ld+json">
+    <!-- Datos estructurados para productos ejemplo -->
+    <script type="application/ld+json">
         {
             "@context": "https://schema.org/",
             "@type": "Store",
@@ -64,7 +67,7 @@
             right: 0;
             padding: 1rem 2rem;
             border-bottom: 1px solid #eee;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         .header-content {
@@ -162,19 +165,19 @@
         }
 
         /* Sección central */
-  .hero {
-    background: #fff;
-    padding: 8vh 2vw 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+        .hero {
+            background: #fff;
+            padding: 8vh 2vw 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
                 transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
+        }
 
         .hero.hidden {
             display: none;
@@ -183,35 +186,35 @@
             pointer-events: none;
         }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2.5vh;
-    color: #000;
-    font-weight: 700;
-    letter-spacing: 3px;
-    padding: 5vh 2vw 0;
-}
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2.5vh;
+            color: #000;
+            font-weight: 700;
+            letter-spacing: 3px;
+            padding: 5vh 2vw 0;
+        }
 
-.hero p {
-    font-size: 0.95rem;
-    max-width: 700px;
-    margin: 0 auto 2vh;
-    color: #000;
-    line-height: 1.8;
-    padding: 1vh 2vw 0;
-}
+        .hero p {
+            font-size: 0.95rem;
+            max-width: 700px;
+            margin: 0 auto 2vh;
+            color: #000;
+            line-height: 1.8;
+            padding: 1vh 2vw 0;
+        }
 
         /* Contenedor de productos */
-.products-container {
-    max-width: 1600px;
-    margin: 0 auto 4vh;
-    padding: 2vh 2vw 0;
-    display: none;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        .products-container {
+            max-width: 1600px;
+            margin: 0 auto 4vh;
+            padding: 2vh 2vw 0;
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
                 transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
+        }
 
         .products-container.visible {
             display: block;
@@ -231,33 +234,81 @@
             border-radius: 4px;
             overflow: hidden;
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                        box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             opacity: 0;
             animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
 
-        .product-card:nth-child(1) { animation-delay: 0.05s; }
-        .product-card:nth-child(2) { animation-delay: 0.1s; }
-        .product-card:nth-child(3) { animation-delay: 0.15s; }
-        .product-card:nth-child(4) { animation-delay: 0.2s; }
-        .product-card:nth-child(5) { animation-delay: 0.25s; }
-        .product-card:nth-child(6) { animation-delay: 0.3s; }
-        .product-card:nth-child(7) { animation-delay: 0.35s; }
-        .product-card:nth-child(8) { animation-delay: 0.4s; }
-        .product-card:nth-child(9) { animation-delay: 0.45s; }
-        .product-card:nth-child(10) { animation-delay: 0.5s; }
-        .product-card:nth-child(11) { animation-delay: 0.55s; }
-        .product-card:nth-child(12) { animation-delay: 0.6s; }
-        .product-card:nth-child(13) { animation-delay: 0.65s; }
-        .product-card:nth-child(14) { animation-delay: 0.7s; }
-        .product-card:nth-child(15) { animation-delay: 0.75s; }
-        .product-card:nth-child(16) { animation-delay: 0.8s; }
+        .product-card:nth-child(1) {
+            animation-delay: 0.05s;
+        }
+
+        .product-card:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .product-card:nth-child(3) {
+            animation-delay: 0.15s;
+        }
+
+        .product-card:nth-child(4) {
+            animation-delay: 0.2s;
+        }
+
+        .product-card:nth-child(5) {
+            animation-delay: 0.25s;
+        }
+
+        .product-card:nth-child(6) {
+            animation-delay: 0.3s;
+        }
+
+        .product-card:nth-child(7) {
+            animation-delay: 0.35s;
+        }
+
+        .product-card:nth-child(8) {
+            animation-delay: 0.4s;
+        }
+
+        .product-card:nth-child(9) {
+            animation-delay: 0.45s;
+        }
+
+        .product-card:nth-child(10) {
+            animation-delay: 0.5s;
+        }
+
+        .product-card:nth-child(11) {
+            animation-delay: 0.55s;
+        }
+
+        .product-card:nth-child(12) {
+            animation-delay: 0.6s;
+        }
+
+        .product-card:nth-child(13) {
+            animation-delay: 0.65s;
+        }
+
+        .product-card:nth-child(14) {
+            animation-delay: 0.7s;
+        }
+
+        .product-card:nth-child(15) {
+            animation-delay: 0.75s;
+        }
+
+        .product-card:nth-child(16) {
+            animation-delay: 0.8s;
+        }
 
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -266,7 +317,7 @@
 
         .product-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         .product-image {
@@ -317,18 +368,18 @@
         }
 
         /* Logo */
-.logo-section {
-    background: #fff;
-    padding: 6vh 2vw 4vh;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        .logo-section {
+            background: #fff;
+            padding: 6vh 2vw 4vh;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
                 transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
+        }
 
         .logo-section.hidden {
             display: none;
@@ -349,14 +400,14 @@
         }
 
         /* Footer */
-footer {
-    background: #fff;
-    padding: 6vh 2vw 4vh;
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        footer {
+            background: #fff;
+            padding: 6vh 2vw 4vh;
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
                 transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
+        }
 
         footer.hidden {
             display: none;
@@ -408,6 +459,7 @@ footer {
             transition: color 0.3s, text-decoration 0.3s;
             cursor: pointer;
         }
+
         .insta-link:hover {
             color: #000;
             text-decoration: underline;
@@ -434,11 +486,28 @@ footer {
         }
 
         @media (max-width: 1024px) {
-    .hero { padding: 6vh 2vw 0; }
-    .hero h1 { font-size: 2rem; padding: 3vh 2vw 0; margin-bottom: 2vh; }
-    .logo-section { padding: 4vh 2vw 2vh; }
-    .products-container { margin-bottom: 2vh; padding: 1vh 2vw 0; }
-    footer { padding: 4vh 2vw 2vh; }
+            .hero {
+                padding: 6vh 2vw 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                padding: 3vh 2vw 0;
+                margin-bottom: 2vh;
+            }
+
+            .logo-section {
+                padding: 4vh 2vw 2vh;
+            }
+
+            .products-container {
+                margin-bottom: 2vh;
+                padding: 1vh 2vw 0;
+            }
+
+            footer {
+                padding: 4vh 2vw 2vh;
+            }
 
             .footer-content {
                 grid-template-columns: repeat(3, 1fr);
@@ -446,41 +515,49 @@ footer {
         }
 
         @media (max-width: 1000px) {
-    header.fixed {
-        padding: 1rem;
-    }
-    header.fixed .header-content {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: flex-start;
-    }
-    .logo-header img {
-        height: 25px;
-    }
-    header.fixed .logo-header {
-        max-width: 100%;
-    }
-    header.fixed .contact-info-header {
-        max-width: 100%;
-        text-align: left;
-        font-size: 0.7rem;
-    }
-    nav ul {
-        gap: 1.5rem;
-        width: 100%;
-    }
-    nav ul li a {
-        font-size: 0.85rem;
-    }
-    header.fixed nav ul li a {
-        font-size: 0.8rem;
-    }
-}
+            header.fixed {
+                padding: 1rem;
+            }
+
+            header.fixed .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            .logo-header img {
+                height: 25px;
+            }
+
+            header.fixed .logo-header {
+                max-width: 100%;
+            }
+
+            header.fixed .contact-info-header {
+                max-width: 100%;
+                text-align: left;
+                font-size: 0.7rem;
+            }
+
+            nav ul {
+                gap: 1.5rem;
+                width: 100%;
+            }
+
+            nav ul li a {
+                font-size: 0.85rem;
+            }
+
+            header.fixed nav ul li a {
+                font-size: 0.8rem;
+            }
+        }
 
         @media (max-width: 768px) {
             .footer-box p {
                 text-align: center !important;
             }
+
             body.catalog-view {
                 padding-top: 140px;
             }
@@ -579,33 +656,79 @@ footer {
                 margin-left: 0;
             }
 
-                .hero { padding: 4vh 1vw 0; }
-    .hero h1 { font-size: 1.8rem; padding: 2vh 1vw 0; margin-bottom: 1.5vh; }
-    .hero p { font-size: 0.9rem; margin-bottom: 1.5vh; padding: 1vh 1vw 0; }
-    .logo-section { padding: 3vh 1vw 2vh; }
-    .products-container { padding: 1vh 1vw 0; margin-bottom: 1.5vh; }
-    footer { padding: 3vh 1vw 2vh; }
+            .hero {
+                padding: 4vh 1vw 0;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+                padding: 2vh 1vw 0;
+                margin-bottom: 1.5vh;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+                margin-bottom: 1.5vh;
+                padding: 1vh 1vw 0;
+            }
+
+            .logo-section {
+                padding: 3vh 1vw 2vh;
+            }
+
+            .products-container {
+                padding: 1vh 1vw 0;
+                margin-bottom: 1.5vh;
+            }
+
+            footer {
+                padding: 3vh 1vw 2vh;
+            }
         }
 
         @media (max-width: 480px) {
             body.catalog-view {
                 padding-top: 160px;
             }
+
             .products-grid {
                 grid-template-columns: 1fr;
             }
+
             .logo-section {
                 padding: 3rem 1rem;
             }
-            .hero { padding: 2vh 1vw 0; }
-            .hero h1 { font-size: 1.5rem; letter-spacing: 2px; padding: 1vh 1vw 0; margin-bottom: 1vh; }
-            .hero p { font-size: 0.85rem; margin-bottom: 1vh; padding: 0.5vh 1vw 0; }
-            .logo-section { padding: 2vh 1vw 1vh; }
-            footer { padding: 2vh 1vw 1vh; }
+
+            .hero {
+                padding: 2vh 1vw 0;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+                letter-spacing: 2px;
+                padding: 1vh 1vw 0;
+                margin-bottom: 1vh;
+            }
+
+            .hero p {
+                font-size: 0.85rem;
+                margin-bottom: 1vh;
+                padding: 0.5vh 1vw 0;
+            }
+
+            .logo-section {
+                padding: 2vh 1vw 1vh;
+            }
+
+            footer {
+                padding: 2vh 1vw 1vh;
+            }
         }
 
         /* Animaciones sutiles */
-        .hero, .logo-section, .footer-box {
+        .hero,
+        .logo-section,
+        .footer-box {
             animation: none;
         }
 
@@ -615,6 +738,7 @@ footer {
         }
     </style>
 </head>
+
 <body>
     <div id="main-wrapper" style="flex:1 0 auto;display:flex;flex-direction:column;">
         <!-- Header con menú de navegación -->
@@ -625,7 +749,8 @@ footer {
                 </div>
                 <nav>
                     <ul role="menubar">
-                        <li><a href="#pendientes" data-section="pendientes" role="menuitem" tabindex="0">PENDIENTES</a></li>
+                        <li><a href="#pendientes" data-section="pendientes" role="menuitem" tabindex="0">PENDIENTES</a>
+                        </li>
                         <li><a href="#collares" data-section="collares" role="menuitem" tabindex="0">COLLARES</a></li>
                         <li><a href="#anillos" data-section="anillos" role="menuitem" tabindex="0">ANILLOS</a></li>
                         <li><a href="#pulseras" data-section="pulseras" role="menuitem" tabindex="0">PULSERAS</a></li>
@@ -640,10 +765,10 @@ footer {
 
         <!-- Sección hero central -->
         <section class="hero" id="heroSection">
-        <h1>CATÁLOGO<br>FW 25/26</h1>
-        <p>¿Te gustaría realizar un pedido o alguna otra consulta?<br>
-        Ponte en contacto con nosotros, estaremos encantados de atenderte.<br>
-        pedidos@aldazabal.es | T (+34) 943 732 120</p>
+            <h1>CATÁLOGO<br>FW 25/26</h1>
+            <p>¿Te gustaría realizar un pedido o alguna otra consulta?<br>
+                Ponte en contacto con nosotros, estaremos encantados de atenderte.<br>
+                pedidos@aldazabal.es | T (+34) 943 732 120</p>
         </section>
 
         <!-- Contenedor de productos -->
@@ -665,17 +790,19 @@ footer {
         <div class="footer-content">
             <div class="footer-box">
                 <p>GETARIA, 8<br>
-                20005 SAN SEBASTIÁN</p>
+                    20005 SAN SEBASTIÁN</p>
             </div>
             <div class="footer-box">
                 <p>DE LUNES A SÁBADO<br>
-                10:00 - 13:30<br>
-                16:00 - 20:00</p>
+                    10:00 - 13:30<br>
+                    16:00 - 20:00</p>
             </div>
             <div class="footer-box">
                 <p>PEDIDOS@ALDAZABAL.ES<br>
-                T (+34) 943 732 120<br>
-                <a href="https://www.instagram.com/aldazabalconcept/" target="_blank" rel="noopener" class="insta-link">INSTAGRAM</a></p>
+                    T (+34) 943 732 120<br>
+                    <a href="https://www.instagram.com/aldazabalconcept/" target="_blank" rel="noopener"
+                        class="insta-link">INSTAGRAM</a>
+                </p>
             </div>
         </div>
     </footer>
@@ -712,14 +839,14 @@ footer {
         function renderProducts(category) {
             const grid = document.getElementById('productsGrid');
             grid.innerHTML = '';
-            
+
             const products = productsData[category] || [];
-            
+
             if (products.length === 0) {
                 grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 2rem; color: #666;">No hay productos disponibles en esta categoría.</p>';
                 return;
             }
-            
+
             products.forEach(product => {
                 const card = document.createElement('div');
                 card.className = 'product-card';
@@ -734,7 +861,7 @@ footer {
                 `;
                 // Easy loading: ocultar imagen hasta que se cargue
                 const img = card.querySelector('img');
-                img.addEventListener('load', function() {
+                img.addEventListener('load', function () {
                     img.classList.remove('loading');
                 });
 
@@ -763,7 +890,7 @@ footer {
         // Función para cambiar de vista
         function switchView(view) {
             currentView = view;
-            
+
             // Actualizar enlaces activos
             document.querySelectorAll('nav a').forEach(link => {
                 link.classList.remove('active');
@@ -775,7 +902,7 @@ footer {
             if (view === 'home') {
                 // Vista home - ocultar catálogo primero
                 productsContainer.classList.remove('visible');
-                
+
                 setTimeout(() => {
                     // Mostrar hero, logo y footer
                     heroSection.classList.remove('hidden');
@@ -784,7 +911,7 @@ footer {
                     mainHeader.classList.remove('fixed');
                     body.classList.remove('catalog-view');
                 }, 100);
-                
+
                 // Scroll suave al inicio
                 setTimeout(() => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -794,19 +921,19 @@ footer {
                 heroSection.classList.add('hidden');
                 logoSection.classList.add('hidden');
                 footer.classList.add('hidden');
-                
+
                 setTimeout(() => {
                     mainHeader.classList.add('fixed');
                     body.classList.add('catalog-view');
-                    
+
                     // Renderizar productos de la categoría
                     renderProducts(view);
-                    
+
                     setTimeout(() => {
                         productsContainer.classList.add('visible');
                     }, 100);
                 }, 300);
-                
+
                 // Scroll al inicio
                 setTimeout(() => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -824,7 +951,7 @@ footer {
         });
 
         // Event listener para el logo (volver a home)
-        logoHeader.addEventListener('click', function() {
+        logoHeader.addEventListener('click', function () {
             switchView('home');
         });
 
@@ -871,4 +998,5 @@ footer {
         }
     </script>
 </body>
+
 </html>
