@@ -3,367 +3,631 @@
     {
       "id": 658,
       "name": "Pendiente P-658",
-      "price": "65€",
+      "price": "81€",
       "image": "images/pendientes/P-658:A.jpg"
     },
     {
       "id": 659,
       "name": "Pendiente P-659",
-      "price": "65€",
+      "price": "57€",
       "image": "images/pendientes/P-659:A.jpg"
     },
     {
       "id": 660,
       "name": "Pendiente P-660",
-      "price": "70€",
+      "price": "81€",
       "image": "images/pendientes/P-660:A.jpg"
     },
     {
       "id": 661,
       "name": "Pendiente P-661",
-      "price": "70€",
+      "price": "54 €",
       "image": "images/pendientes/P-661:A.jpg"
     },
     {
       "id": 662,
       "name": "Pendiente P-662",
-      "price": "70€",
+      "price": "54 €",
       "image": "images/pendientes/P-662:A.jpg"
     },
     {
       "id": 663,
       "name": "Pendiente P-663",
-      "price": "65€",
+      "price": "81 €",
       "image": "images/pendientes/P-663:A.jpg"
     },
     {
       "id": 664,
       "name": "Pendiente P-664",
-      "price": "70€",
+      "price": "72 €",
       "image": "images/pendientes/P-664:A.jpg"
     },
     {
       "id": 665,
       "name": "Pendiente P-665",
-      "price": "65€",
+      "price": "75 €",
       "image": "images/pendientes/P-665:A.jpg"
     },
     {
       "id": 666,
       "name": "Pendiente P-666",
-      "price": "70€",
+      "price": "78 €",
       "image": "images/pendientes/P-666:A.jpg"
     },
     {
       "id": 667,
       "name": "Pendiente P-667",
-      "price": "70€",
+      "price": "66 €",
       "image": "images/pendientes/P-667:A.jpg"
     },
     {
       "id": 668,
       "name": "Pendiente P-668",
-      "price": "65€",
+      "price": "99 €",
       "image": "images/pendientes/P-668:A.jpg"
     },
     {
       "id": 669,
       "name": "Pendiente P-669",
-      "price": "70€",
+      "price": "114 €",
       "image": "images/pendientes/P-669:A.jpg"
     },
     {
       "id": 670,
       "name": "Pendiente P-670",
-      "price": "65€",
+      "price": "117 €",
       "image": "images/pendientes/P-670:A.jpg"
     },
     {
       "id": 671,
       "name": "Pendiente P-671",
-      "price": "70€",
+      "price": "63 €",
       "image": "images/pendientes/P-671:A.jpg"
     },
     {
       "id": 672,
       "name": "Pendiente P-672",
-      "price": "65€",
+      "price": "57 €",
       "image": "images/pendientes/P-672:A.jpg"
     },
     {
-      "id": 673,
-      "name": "Pendiente P-673",
-      "price": "70€",
-      "image": "images/pendientes/P-673:A.jpg"
+      "id": 675,
+      "name": "Pendiente P-675",
+      "price": "57 €",
+      "image": "images/pendientes/P-675:A.jpg"
+    },
+    {
+      "id": 676,
+      "name": "Pendiente P-676",
+      "price": "81 €",
+      "image": "images/pendientes/P-676:A.jpg"
+    },
+    {
+      "id": 677,
+      "name": "Pendiente P-677",
+      "price": "57 €",
+      "image": "images/pendientes/P-677:B.jpg"
+    },
+    {
+      "id": 678,
+      "name": "Pendiente P-678",
+      "price": "117 €",
+      "image": "images/pendientes/P-678:A.jpg"
+    },
+    {
+      "id": 679,
+      "name": "Pendiente P-679",
+      "price": "78 €",
+      "image": "images/pendientes/P-679:A.jpg"
+    },
+    {
+      "id": 681,
+      "name": "Pendiente P-681",
+      "price": "51 €",
+      "image": "images/pendientes/P-681:A.jpg"
+    },
+    {
+      "id": 682,
+      "name": "Pendiente P-682",
+      "price": "54 €",
+      "image": "images/pendientes/P-682:A.jpg"
+    },
+    {
+      "id": 683,
+      "name": "Pendiente P-683",
+      "price": "54 €",
+      "image": "images/pendientes/P-683:A.jpg"
+    },
+    {
+      "id": 684,
+      "name": "Pendiente P-684",
+      "price": "57 €",
+      "image": "images/pendientes/P-684:A.jpg"
+    },
+    {
+      "id": 685,
+      "name": "Pendiente P-685",
+      "price": "75 €",
+      "image": "images/pendientes/P-685:A.jpg"
+    },
+    {
+      "id": 686,
+      "name": "Pendiente P-686",
+      "price": "87 €",
+      "image": "images/pendientes/P-686:A.jpg"
+    },
+    {
+      "id": 687,
+      "name": "Pendiente P-687",
+      "price": "33 €",
+      "image": "images/pendientes/P-687:A.jpg"
+    },
+    {
+      "id": 688,
+      "name": "Pendiente P-688",
+      "price": "75 €",
+      "image": "images/pendientes/P-688:A.jpg"
+    },
+    {
+      "id": 689,
+      "name": "Pendiente P-689",
+      "price": "87 €",
+      "image": "images/pendientes/P-689:A.jpg"
+    },
+    {
+      "id": 692,
+      "name": "Pendiente P-692",
+      "price": "66 €",
+      "image": "images/pendientes/P-692:A.jpg"
+    },
+    {
+      "id": 693,
+      "name": "Pendiente P-693",
+      "price": "45 €",
+      "image": "images/pendientes/P-693:B.jpg"
+    },
+    {
+      "id": 696,
+      "name": "Pendiente P-696",
+      "price": "57 €",
+      "image": "images/pendientes/P-696:B.jpg"
+    },
+    {
+      "id": 697,
+      "name": "Pendiente P-697",
+      "price": "75 €",
+      "image": "images/pendientes/P-697:A.jpg"
+    },
+    {
+      "id": 699,
+      "name": "Pendiente P-699",
+      "price": "42 €",
+      "image": "images/pendientes/P-699:3.jpg"
+    },
+    {
+      "id": 701,
+      "name": "Pendiente P-701",
+      "price": "78 €",
+      "image": "images/pendientes/P-701:A.jpg"
+    },
+    {
+      "id": 702,
+      "name": "Pendiente P-702",
+      "price": "57 €",
+      "image": "images/pendientes/P-702:A.jpg"
+    },
+    {
+      "id": 704,
+      "name": "Pendiente P-704",
+      "price": "57 €",
+      "image": "images/pendientes/P-704:A.jpg"
+    },
+    {
+      "id": 705,
+      "name": "Pendiente P-705",
+      "price": "75 €",
+      "image": "images/pendientes/P-705:A.jpg"
+    },
+    {
+      "id": 706,
+      "name": "Pendiente P-706",
+      "price": "72 €",
+      "image": "images/pendientes/P-706:A.jpg"
+    },
+    {
+      "id": 707,
+      "name": "Pendiente P-707",
+      "price": "99 €",
+      "image": "images/pendientes/P-707:A.jpg"
+    },
+    {
+      "id": 708,
+      "name": "Pendiente P-708",
+      "price": "111 €",
+      "image": "images/pendientes/P-708:A.jpg"
+    },
+    {
+      "id": 709,
+      "name": "Pendiente P-709",
+      "price": "36 €",
+      "image": "images/pendientes/P-709:A.jpg"
+    },
+    {
+      "id": 710,
+      "name": "Pendiente P-710",
+      "price": "63 €",
+      "image": "images/pendientes/P-710:A.jpg"
+    },
+    {
+      "id": 711,
+      "name": "Pendiente P-711",
+      "price": "45 €",
+      "image": "images/pendientes/P-711:A.jpg"
+    },
+    {
+      "id": 715,
+      "name": "Pendiente P-715",
+      "price": "54 €",
+      "image": "images/pendientes/P-715:A.jpg"
+    },
+    {
+      "id": 716,
+      "name": "Pendiente P-716",
+      "price": "57 €",
+      "image": "images/pendientes/P-716:A.jpg"
     }
   ],
   "collares": [
     {
       "id": 1916,
       "name": "Collar C-1916",
-      "price": "95€",
+      "price": "207€",
       "image": "images/collares/C-1916:A.jpg"
     },
     {
       "id": 1917,
       "name": "Collar C-1917",
-      "price": "95€",
+      "price": "138 €",
       "image": "images/collares/C-1917:A.jpg"
     },
     {
       "id": 1918,
       "name": "Collar C-1918",
-      "price": "100€",
+      "price": "87 €",
       "image": "images/collares/C-1918:A.jpg"
     },
     {
       "id": 1919,
       "name": "Collar C-1919",
-      "price": "100€",
+      "price": "96 €",
       "image": "images/collares/C-1919:A.jpg"
     },
     {
       "id": 1920,
       "name": "Collar C-1920",
-      "price": "95€",
+      "price": "138 €",
       "image": "images/collares/C-1920:A.jpg"
     },
     {
       "id": 1921,
       "name": "Collar C-1921",
-      "price": "100€",
+      "price": "165 €",
       "image": "images/collares/C-1921:A.jpg"
     },
     {
       "id": 1922,
       "name": "Collar C-1922",
-      "price": "95€",
+      "price": "147 €",
       "image": "images/collares/C-1922.jpg"
     },
     {
       "id": 1923,
       "name": "Collar C-1923",
-      "price": "95€",
+      "price": "162 €",
       "image": "images/collares/C-1923.jpg"
     },
     {
       "id": 1925,
       "name": "Collar C-1925",
-      "price": "100€",
+      "price": "147 €",
       "image": "images/collares/C-1925:A.jpg"
     },
     {
       "id": 1927,
       "name": "Collar C-1927",
-      "price": "105€",
+      "price": "111 €",
       "image": "images/collares/C-1927:A.jpg"
     },
     {
       "id": 1928,
       "name": "Collar C-1928",
-      "price": "105€",
+      "price": "45 €",
       "image": "images/collares/C-1928:A.jpg"
     },
     {
       "id": 1929,
       "name": "Collar C-1929",
-      "price": "100€",
+      "price": "39 €",
       "image": "images/collares/C-1929:A.jpg"
     },
     {
       "id": 1930,
       "name": "Collar C-1930",
-      "price": "105€",
+      "price": "39 €",
       "image": "images/collares/C-1930:A.jpg"
     },
     {
       "id": 1933,
       "name": "Collar C-1933",
-      "price": "95€",
+      "price": "147 €",
       "image": "images/collares/C-1933:A.jpg"
     },
     {
       "id": 1934,
       "name": "Collar C-1934",
-      "price": "100€",
+      "price": "117 €",
       "image": "images/collares/C-1934:A.jpg"
     },
     {
       "id": 1936,
       "name": "Collar C-1936",
-      "price": "95€",
+      "price": "177 €",
       "image": "images/collares/C-1936:A.jpg"
+    },
+    {
+      "id": 1938,
+      "name": "Collar C-1938",
+      "price": "126 €",
+      "image": "images/collares/C-1938:A.jpg"
+    },
+    {
+      "id": 1940,
+      "name": "Collar C-1940",
+      "price": "141 €",
+      "image": "images/collares/C-1940:A.jpg"
+    },
+    {
+      "id": 1943,
+      "name": "Collar C-1943",
+      "price": "135 €",
+      "image": "images/collares/C-1943:A.jpg"
+    },
+    {
+      "id": 1945,
+      "name": "Collar C-1945",
+      "price": "63 €",
+      "image": "images/collares/C-1945:A.jpg"
+    },
+    {
+      "id": 1946,
+      "name": "Collar C-1946",
+      "price": "198 €",
+      "image": "images/collares/C-1946:A.jpg"
+    },
+    {
+      "id": 1947,
+      "name": "Collar C-1947",
+      "price": "117 €",
+      "image": "images/collares/C-1947:A.jpg"
+    },
+    {
+      "id": 1948,
+      "name": "Collar C-1948",
+      "price": "147 €",
+      "image": "images/collares/C-1948:A.jpg"
+    },
+    {
+      "id": 1949,
+      "name": "Collar C-1949",
+      "price": "57 €",
+      "image": "images/collares/C-1949:A.jpg"
+    },
+    {
+      "id": 1950,
+      "name": "Collar C-1950",
+      "price": "111 €",
+      "image": "images/collares/C-1950:A.jpg"
+    },
+    {
+      "id": 1952,
+      "name": "Collar C-1952",
+      "price": "69 €",
+      "image": "images/collares/C-1952:A.jpg"
+    },
+    {
+      "id": 1953,
+      "name": "Collar C-1953",
+      "price": "114 €",
+      "image": "images/collares/C-1953:A.jpg"
+    },
+    {
+      "id": 1955,
+      "name": "Collar C-1955",
+      "price": "126 €",
+      "image": "images/collares/C-1955:A.jpg"
     }
   ],
   "anillos": [
     {
-      "id": 4931,
-      "name": "Anillo S-493:1B",
-      "price": "45€",
+      "id": 49301,
+      "name": "Sortija S-493:1B",
+      "price": "36€",
       "image": "images/anillos/S-493:1B.jpg"
     },
     {
-      "id": 4932,
-      "name": "Anillo S-493:1D",
-      "price": "45€",
+      "id": 49302,
+      "name": "Sortija S-493:1D",
+      "price": "36€",
       "image": "images/anillos/S-493:1D.jpg"
     },
     {
-      "id": 4933,
-      "name": "Anillo S-493:1J",
-      "price": "45€",
+      "id": 49303,
+      "name": "Sortija S-493:1J",
+      "price": "36€",
       "image": "images/anillos/S-493:1J.jpg"
     },
     {
-      "id": 4934,
-      "name": "Anillo S-493:2A",
-      "price": "45€",
+      "id": 49304,
+      "name": "Sortija S-493:2A",
+      "price": "36€",
       "image": "images/anillos/S-493:2A.jpg"
     },
     {
-      "id": 4935,
-      "name": "Anillo S-493:2F",
-      "price": "45€",
+      "id": 49305,
+      "name": "Sortija S-493:2F",
+      "price": "36€",
       "image": "images/anillos/S-493:2F.jpg"
     },
     {
-      "id": 4936,
-      "name": "Anillo S-493:2J",
-      "price": "45€",
+      "id": 49306,
+      "name": "Sortija S-493:2J",
+      "price": "36€",
       "image": "images/anillos/S-493:2J.jpg"
     },
     {
-      "id": 4937,
-      "name": "Anillo S-493:3C",
-      "price": "45€",
+      "id": 49307,
+      "name": "Sortija S-493:3C",
+      "price": "36€",
       "image": "images/anillos/S-493:3C.jpg"
     },
     {
-      "id": 4938,
-      "name": "Anillo S-493:3E",
-      "price": "45€",
+      "id": 49308,
+      "name": "Sortija S-493:3E",
+      "price": "36€",
       "image": "images/anillos/S-493:3E.jpg"
     },
     {
-      "id": 4939,
-      "name": "Anillo S-493:3F",
-      "price": "45€",
+      "id": 49309,
+      "name": "Sortija S-493:3F",
+      "price": "36€",
       "image": "images/anillos/S-493:3F.jpg"
     },
     {
-      "id": 4940,
-      "name": "Anillo S-493:4H",
-      "price": "45€",
+      "id": 49310,
+      "name": "Sortija S-493:4H",
+      "price": "36€",
       "image": "images/anillos/S-493:4H.jpg"
     },
     {
-      "id": 4941,
-      "name": "Anillo S-493:4J",
-      "price": "45€",
+      "id": 49311,
+      "name": "Sortija S-493:4J",
+      "price": "36€",
       "image": "images/anillos/S-493:4J.jpg"
     },
     {
-      "id": 4942,
-      "name": "Anillo S-493:5A",
-      "price": "45€",
+      "id": 49312,
+      "name": "Sortija S-493:5A",
+      "price": "36€",
       "image": "images/anillos/S-493:5A.jpg"
     },
     {
-      "id": 4943,
-      "name": "Anillo S-493:5H",
-      "price": "45€",
+      "id": 49313,
+      "name": "Sortija S-493:5H",
+      "price": "36€",
       "image": "images/anillos/S-493:5H.jpg"
     },
     {
-      "id": 4944,
-      "name": "Anillo S-493:6A",
-      "price": "45€",
+      "id": 49314,
+      "name": "Sortija S-493:6A",
+      "price": "36€",
       "image": "images/anillos/S-493:6A.jpg"
     },
     {
-      "id": 4945,
-      "name": "Anillo S-493:6E",
-      "price": "45€",
+      "id": 49315,
+      "name": "Sortija S-493:6E",
+      "price": "36€",
       "image": "images/anillos/S-493:6E.jpg"
     },
     {
-      "id": 4946,
-      "name": "Anillo S-493:6H",
-      "price": "45€",
+      "id": 49316,
+      "name": "Sortija S-493:6H",
+      "price": "36€",
       "image": "images/anillos/S-493:6H.jpg"
+    },
+    {
+      "id": 49317,
+      "name": "Sortija S-493:7C",
+      "price": "36€",
+      "image": "images/anillos/S-493:7C.jpg"
+    },
+    {
+      "id": 49318,
+      "name": "Sortija S-493:7J",
+      "price": "36€",
+      "image": "images/anillos/S-493:7J.jpg"
     }
   ],
   "pulseras": [
     {
       "id": 641,
       "name": "Pulsera E-641",
-      "price": "80€",
+      "price": "54€",
       "image": "images/pulseras/E-641:A.jpg"
     },
     {
       "id": 642,
       "name": "Pulsera E-642",
-      "price": "85€",
+      "price": "36 €",
       "image": "images/pulseras/E-642:B.jpg"
     },
     {
       "id": 643,
       "name": "Pulsera E-643",
-      "price": "80€",
+      "price": "36 €",
       "image": "images/pulseras/E-643:A.jpg"
     },
     {
       "id": 644,
       "name": "Pulsera E-644",
-      "price": "85€",
+      "price": "42 €",
       "image": "images/pulseras/E-644:A.jpg"
     },
     {
       "id": 645,
       "name": "Pulsera E-645",
-      "price": "75€",
+      "price": "33 €",
       "image": "images/pulseras/E-645.jpg"
     },
     {
       "id": 646,
       "name": "Pulsera E-646",
-      "price": "80€",
+      "price": "33 €",
       "image": "images/pulseras/E-646:A.jpg"
     },
     {
       "id": 647,
       "name": "Pulsera E-647",
-      "price": "85€",
+      "price": "48 €",
       "image": "images/pulseras/E-647:A.jpg"
     },
     {
       "id": 648,
       "name": "Pulsera E-648",
-      "price": "85€",
+      "price": "36 €",
       "image": "images/pulseras/E-648:A.jpg"
     },
     {
       "id": 649,
       "name": "Pulsera E-649",
-      "price": "80€",
+      "price": "33 €",
       "image": "images/pulseras/E-649:A.jpg"
     },
     {
       "id": 650,
       "name": "Pulsera E-650",
-      "price": "75€",
+      "price": "33 €",
       "image": "images/pulseras/E-650.jpg"
     },
     {
       "id": 651,
       "name": "Pulsera E-651",
-      "price": "75€",
+      "price": "33 €",
       "image": "images/pulseras/E-651.jpg"
     },
     {
       "id": 652,
       "name": "Pulsera E-652",
-      "price": "75€",
+      "price": "33 €",
       "image": "images/pulseras/E-652.jpg"
     }
   ]

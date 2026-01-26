@@ -770,7 +770,27 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Prevent blue links on iOS/Safari and other auto-detectors */
+        a[href^="tel"],
+        a[href^="mailto"],
+        .footer-box a {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        /* Specific overwrite for potential inserted elements */
+        span[x-detect-type="address"],
+        span[x-detect-type="email"],
+        span[x-detect-type="telephone"] {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
     </style>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="email=no">
 </head>
 
 <body>
@@ -832,8 +852,29 @@
                     16:00 - 20:00</p>
             </div>
             <div class="footer-box">
-                <p>PEDIDOS@ALDAZABAL.ES<br>
-                    T (+34) 943 732 120<br>
+                <p><span class="no-wrap">PEDIDOS@ALDAZABAL.ES</span><br>
+                    <span class="no-wrap">T (+34) 943 732 120</span><br>
+                    <a href="https://www.instagram.com/aldazabalconcept/" target="_blank" rel="noopener"
+                        class="insta-link">INSTAGRAM</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-content" style="margin-top: 2rem;">
+            <div class="footer-box">
+                <p>SAN ANTONIO, 23<br>
+                    01003<br>
+                    VITORIA-GASTEIZ</p>
+            </div>
+            <div class="footer-box">
+                <p>DE LUNES A VIERNES<br>
+                    10:30 - 13:30<br>
+                    17:00 - 20:00<br>
+                    SÁBADOS CITA PREVIA</p>
+            </div>
+            <div class="footer-box">
+                <p><span class="no-wrap">PEDIDOS@ALDAZABAL.ES</span><br>
+                    <span class="no-wrap">620 060 303</span><br>
+                    <span class="no-wrap">T (+34) 943 283 428</span><br>
                     <a href="https://www.instagram.com/aldazabalconcept/" target="_blank" rel="noopener"
                         class="insta-link">INSTAGRAM</a>
                 </p>
