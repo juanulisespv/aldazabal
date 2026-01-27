@@ -10,6 +10,7 @@
     <meta name="keywords"
         content="joyería, pendientes, collares, anillos, pulseras, ALDAZABAL, San Sebastián, catálogo, FW 25/26, artesanía, pedidos">
     <link rel="icon" type="image/png" href="images/ALDAZABAL-3.png">
+    <meta name="format-detection" content="telephone=no, email=no">
     <!-- Google Fonts: Work Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Datos estructurados para productos ejemplo -->
@@ -786,6 +787,26 @@
             color: inherit !important;
             text-decoration: none !important;
         }
+
+        .enlaces {
+            /* No romper en varias líneas */
+            white-space: nowrap;
+            word-break: keep-all;
+            overflow-wrap: normal;
+
+            /* Mantener estilo original */
+            color: #000 !important;
+            text-decoration: none !important;
+            font-weight: inherit !important;
+            font-style: inherit !important;
+            font-family: inherit !important;
+
+            /* Safari / iOS anti-azul */
+            -webkit-text-fill-color: #000;
+
+            /* Evitar comportamientos raros en enlaces */
+            pointer-events: auto;
+        }
     </style>
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="date=no">
@@ -811,8 +832,8 @@
                     </ul>
                 </nav>
                 <div class="contact-info-header">
-                    PEDIDOS@ALDAZABAL.ES<br>
-                    T (+34) 943 732 120
+                    <span class="enlaces">PEDIDOS@ALDAZABAL.ES</span><br>
+                    <span class="enlaces">T (+34) 943 732 120</span>
                 </div>
             </div>
         </header>
@@ -822,7 +843,8 @@
             <h1>CATÁLOGO<br>FW 25/26</h1>
             <p>¿Te gustaría realizar un pedido o alguna otra consulta?<br>
                 Ponte en contacto con nosotros, estaremos encantados de atenderte.<br>
-                pedidos@aldazabal.es | T (+34) 943 732 120</p>
+                <span class="enlaces">pedidos@aldazabal.es</span> | <span class="enlaces">T (+34) 943 732 120</span>
+            </p>
         </section>
 
         <!-- Contenedor de productos -->
@@ -853,8 +875,8 @@
                     16:00 - 20:00</p>
             </div>
             <div class="footer-box">
-                <p><span class="no-wrap">PEDIDOS@ALDAZABAL.ES</span><br>
-                    <span class="no-wrap">T (+34) 943 732 120</span><br>
+                <p><span class="enlaces">PEDIDOS@ALDAZABAL.ES</span><br>
+                    <span class="enlaces">T (+34) 943 732 120</span><br>
                     <a href="https://www.instagram.com/aldazabalconcept/" target="_blank" rel="noopener"
                         class="insta-link">INSTAGRAM</a>
                 </p>
@@ -873,9 +895,9 @@
                     SÁBADOS CITA PREVIA</p>
             </div>
             <div class="footer-box">
-                <p><span class="no-wrap">PEDIDOS@ALDAZABAL.ES</span><br>
-                    <span class="no-wrap">620 060 303</span><br>
-                    <span class="no-wrap">T (+34) 943 283 428</span><br>
+                <p><span class="enlaces">PEDIDOS@ALDAZABAL.ES</span><br>
+                    <span class="enlaces">620 060 303</span><br>
+                    <span class="enlaces">T (+34) 943 283 428</span><br>
                     <a href="https://www.instagram.com/aldazabalconcept/" target="_blank" rel="noopener"
                         class="insta-link">INSTAGRAM</a>
                 </p>
