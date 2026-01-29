@@ -1201,6 +1201,57 @@
                 }
             }
         }
+        }
+
+        // Sistema de precarga de imágenes en segundo plano ("Loading por atrás")
+        function startBackgroundPreload() {
+            // Esperar a que el hilo principal se libere
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(preloadImagesProcess);
+            } else {
+                setTimeout(preloadImagesProcess, 2000); // Fallback para Safari antiguo
+            }
+        }
+
+        function preloadImagesProcess() {
+            const allImages = [];
+            // Recolectar todas las imágenes de todas las categorías
+            Object.values(productsData).forEach(list => {
+                list.forEach(p => {
+                    if (p.image) allImages.push(p.image);
+                });
+            });
+
+            if (allImages.length === 0) return;
+
+            console.log(`Iniciando precarga de ${allImages.length} imágenes en background...`);
+
+            let loadedCount = 0;
+            // Cargar de una en una con baja prioridad para no bloquear
+            const preloadNext = (index) => {
+                if (index >= allImages.length) {
+                    console.log('Precarga completa.');
+                    return;
+                }
+
+                const img = new Image();
+                img.src = allImages[index];
+
+                // Cuando cargue (o falle), seguir con la siguiente
+                img.onload = img.onerror = () => {
+                    loadedCount++;
+                    // Usar idle callback recursivo para ser amigable con el usuario
+                    if ('requestIdleCallback' in window) {
+                        requestIdleCallback(() => preloadNext(index + 1));
+                    } else {
+                        setTimeout(() => preloadNext(index + 1), 50);
+                    }
+                };
+            };
+
+            // Empezar
+            preloadNext(0);
+        }
     </script>
 </body>
 
