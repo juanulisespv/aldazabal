@@ -925,15 +925,78 @@
         let currentView = 'home';
         let currentCategory = 'pendientes';
 
-        // Función para cargar productos desde JSON
+        // Función para cargar productos (Híbrido: JSON + CSV)
         async function loadProducts() {
+            // 1. Cargar base desde JSON (backup)
             try {
                 const response = await fetch('products.json');
-                productsData = await response.json();
+                if (response.ok) {
+                    const json = await response.json();
+                    productsData = { ...productsData, ...json };
+                }
             } catch (error) {
-                console.error('Error cargando productos:', error);
-                productsData = { pendientes: [], collares: [], anillos: [], pulseras: [] };
+                console.warn('JSON de productos no disponible o inválido', error);
+                // No fallamos fatalmente, intentamos CSVs
             }
+
+            // 2. Intentar cargar y sobreescribir con CSVs si existen
+            // Mapeo de archivos CSV esperados para cada categoría
+            const csvFiles = {
+                'pendientes': 'pendientes.csv',
+                'collares': 'collares.csv',
+                'anillos': 'anillos.csv',
+                'pulseras': 'pulseras.csv'
+            };
+
+            for (const [category, filename] of Object.entries(csvFiles)) {
+                try {
+                    const res = await fetch(filename);
+                    if (res.ok) {
+                        const text = await res.text();
+                        const parsedProducts = parseCSV(text, category);
+                        if (parsedProducts.length > 0) {
+                            console.log(`Cargados ${parsedProducts.length} productos de ${filename} para ${category}`);
+                            productsData[category] = parsedProducts;
+                        }
+                    }
+                } catch (err) {
+                    console.log(`No se encontró o falló ${filename}, usando datos JSON si existen.`);
+                }
+            }
+        }
+
+        // Parser de CSV simple
+        function parseCSV(csvText, category) {
+            const lines = csvText.split(/\r?\n/);
+            const products = [];
+
+            // Asumimos que la primera línea es cabecera: Foto,Referencia,Precio
+            // Empezamos índice 1
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (!line) continue;
+
+                // Dividir por coma, pero cuidado con comas en precio o nombre si las hubiera (asumimos formato simple)
+                const parts = line.split(',');
+                if (parts.length < 3) continue;
+
+                const foto = parts[0].trim();
+                const referencia = parts[1].trim();
+                const precio = parts[2].trim();
+
+                // Transformar ruta de imagen:
+                // CSV: P-658/A.jpg  ->  JSON/Real: images/pendientes/P-658:A.jpg
+                // Reemplazar '/' por ':' y anteponer carpeta
+                let imagePath = `images/${category}/${foto.replace('/', ':')}`;
+
+                products.push({
+                    id: 10000 + i + (category.charCodeAt(0) * 100), // ID temporal único basado en índice
+                    name: referencia,
+                    price: precio,
+                    image: imagePath
+                });
+            }
+            return products;
         }
 
         // Función para renderizar los productos
