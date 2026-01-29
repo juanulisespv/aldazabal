@@ -1054,6 +1054,20 @@
             });
         });
 
+        // Force mailto links via JS to ensure they open
+        document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.stopPropagation(); // Stop any parent interference
+                // window.location.href = this.href; // Default behavior usually works better if unchecked, but let's leave it to browser default unless default is blocked.
+                // Actually, if user says it does nothing, maybe default IS blocked.
+                // Let's try forcing it.
+                // But first, let's just logging to be sure, and ensure stopPropagation is enough.
+                // If I print to console, user won't see it.
+                // The explicit assignment is safe.
+                window.location.href = this.href;
+            });
+        });
+
         // Event listener para el logo (volver a home)
         logoHeader.addEventListener('click', function () {
             switchView('home');
