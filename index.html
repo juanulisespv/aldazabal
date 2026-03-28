@@ -4,22 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALDAZABAL - Catálogo FW 25/26</title>
+ 
+    <!-- SEO: título con marca + categoría + ciudades -->
+    <title>Joyería ALDAZABAL | Catálogo | San Sebastián · Vitoria-Gasteiz</title>
+ 
+    <!-- SEO: descripción orientada a búsqueda local -->
     <meta name="description"
-        content="Catálogo de joyería ALDAZABAL. Pendientes, collares, anillos y pulseras artesanales en San Sebastián y Vitoria. Contacta para pedidos y consultas.">
+        content="Catálogo de Joyería ALDAZABAL. Pendientes, collares, anillos y pulseras artesanales. Tiendas en San Sebastián y Vitoria-Gasteiz. Pedidos: pedidos@aldazabal.es">
+ 
     <meta name="keywords"
-        content="joyería, pendientes, collares, anillos, pulseras, ALDAZABAL, San Sebastián, catálogo, FW 25/26, artesanía, pedidos">
+        content="joyería, pendientes, collares, anillos, pulseras, ALDAZABAL, San Sebastián, Vitoria-Gasteiz, catálogo, FW 25/26, artesanía, pedidos, joyería artesanal">
+ 
+    <!-- Canonical: evita contenido duplicado si hay www y sin www -->
+    <link rel="canonical" href="https://aldazabal.es/">
+ 
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/ALDAZABAL-3.png">
-    <meta name="format-detection" content="telephone=no, email=no">
-    <!-- Google Fonts: Work Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
-    <!-- Datos estructurados para productos ejemplo -->
+ 
+    <!-- Evitar detección automática de teléfonos/emails en iOS (unificado) -->
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+ 
+    <!-- Open Graph: cómo se ve al compartir en redes sociales / WhatsApp -->
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="https://aldazabal.es/">
+    <meta property="og:title"       content="Joyería ALDAZABAL | Catálogo">
+    <meta property="og:description" content="Pendientes, collares, anillos y pulseras artesanales. Tiendas en San Sebastián y Vitoria-Gasteiz.">
+    <meta property="og:image"       content="https://aldazabal.es/images/ALDAZABAL-1.png">
+    <meta property="og:locale"      content="es_ES">
+ 
+    <!-- Schema.org: dos tiendas físicas -->
     <script type="application/ld+json">
+    [
         {
             "@context": "https://schema.org/",
-            "@type": "Store",
-            "name": "Aldazabal Joyería",
+            "@type": "JewelryStore",
+            "name": "Joyería ALDAZABAL",
+            "url": "https://aldazabal.es",
             "image": "https://aldazabal.es/images/ALDAZABAL-1.png",
+            "email": "pedidos@aldazabal.es",
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Getaria, 8",
@@ -27,10 +49,33 @@
                 "postalCode": "20005",
                 "addressCountry": "ES"
             },
-            "telephone": "+34 943 732 120",
-            "email": "pedidos@aldazabal.es"
+            "telephone": "+34943732120",
+            "openingHours": ["Mo-Sa 10:00-13:30", "Mo-Sa 16:00-20:00"]
+        },
+        {
+            "@context": "https://schema.org/",
+            "@type": "JewelryStore",
+            "name": "Joyería ALDAZABAL",
+            "url": "https://aldazabal.es",
+            "image": "https://aldazabal.es/images/ALDAZABAL-1.png",
+            "email": "pedidos@aldazabal.es",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "San Antonio, 23",
+                "addressLocality": "Vitoria-Gasteiz",
+                "postalCode": "01005",
+                "addressCountry": "ES"
+            },
+            "telephone": "+34943283428",
+            "openingHours": ["Mo-Fr 10:30-13:30", "Mo-Fr 17:00-20:00"]
         }
-        </script>
+    ]
+    </script>
+ 
+    <!-- Google Fonts con preconnect para carga más rápida -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
